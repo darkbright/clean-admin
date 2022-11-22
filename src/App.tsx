@@ -1,12 +1,12 @@
-import React, { FC } from 'react';
-import { Button } from 'antd';
-import 'antd/dist/reset.css';
-import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import Router from './routes/Router';
 
-const App: FC = () => (
-  <div className="App">
-    <Button type="primary">Button</Button>
-  </div>
-);
+function App() {
+  return (
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
+  );
+}
 
 export default App;
