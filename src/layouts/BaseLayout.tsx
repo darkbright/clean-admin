@@ -25,7 +25,7 @@ const BaseLayout: React.FC = () => (
           style={{
             padding: 24,
             margin: 0,
-            minHeight: 280
+            minHeight: 800
           }}
         >
           <Outlet />
