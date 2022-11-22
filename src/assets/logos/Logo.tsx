@@ -11,7 +11,7 @@ interface LogoProp {
  */
 
 function Logo({ width = 40 }: LogoProp) {
-  return <img src="/logo192.png" width={width} />;
+  return <img src="/logo192.png" alt="logo" width={width} />;
 }
 
 export default Logo;

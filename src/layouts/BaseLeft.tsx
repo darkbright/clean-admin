@@ -12,7 +12,11 @@ const items = [
     label: 'Ant Design', 
     key: 'antd', 
     icon: <AntDesignOutlined />,
-    children: [{ label: 'Drawer', key: 'drawer'}]
+    children: [
+      { label: 'Drawer', key: 'drawer'},
+      { label: 'Message', key: 'message'},
+      { label: 'Notification', key: 'notification'},
+    ]
   }, 
   { label: 'Toast Grid', key: '2', icon: <TableOutlined /> }, 
   {

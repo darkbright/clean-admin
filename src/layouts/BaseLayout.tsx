@@ -4,7 +4,7 @@ import { Layout } from 'antd';
 
 import BaseHeader from './BaseHeader';
 import BreadcrumbBar from './BreadcrumbBar';
-import LeftBar from './LeftBar';
+import BaseLeft from './BaseLeft';
 import { Header } from 'antd/es/layout/layout';
 
 import 'antd/dist/reset.css';
@@ -17,7 +17,7 @@ const BaseLayout: React.FC = () => (
       <BaseHeader />
     </Header>
     <Layout>
-      <LeftBar />
+      <BaseLeft />
       <Layout className="site-layout-background" style={{ padding: '0 24px 24px'}}>
         <BreadcrumbBar />
         <Content

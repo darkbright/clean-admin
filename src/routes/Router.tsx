@@ -12,6 +12,8 @@ import Unauthorized from '../pages/Unauthorized';
 import Main from '../pages/Main';
 
 import DrawerPage from '../pages/antd/drawer';
+import MessagePage from '../pages/antd/message';
+import NotificationPage from '../pages/antd/notification';
 
 function Router() {
   return (
@@ -25,6 +27,8 @@ function Router() {
       <Route path="/" element={<BaseLayout />}>
         <Route path="/main" element={<Main />} />
         <Route path="/antd/drawer" element={<DrawerPage />} />
+        <Route path="/antd/message" element={<MessagePage />} />
+        <Route path="/antd/notification" element={<NotificationPage />} />
       </Route>
 
       {/* protected route - require auth and specific pageIds */}
