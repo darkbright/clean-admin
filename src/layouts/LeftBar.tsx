@@ -5,32 +5,19 @@ import {
 } from '@ant-design/icons';
 import { Menu, MenuProps, MenuTheme, Space, Switch } from 'antd';
 import Sider from 'antd/es/layout/Sider';
-
-//  import type { MenuProps } from 'antd';
-// type MenuItem = Required<MenuProps>['items'][number];
-
-// function getItem(
-//   label: React.ReactNode,
-//   key: React.Key,
-//   icon?: React.ReactNode,
-//   children?: MenuItem[],
-//   type?: 'group',
-// ): MenuItem {
-//   return {
-//     key,
-//     icon,
-//     children,
-//     label,
-//     type,
-//   } as MenuItem;
-// }
+import { useNavigate } from 'react-router-dom';
 
 const items = [
-  { label: 'Ant Design', key: '1', icon: <AntDesignOutlined />}, 
+  {
+    label: 'Ant Design', 
+    key: 'antd', 
+    icon: <AntDesignOutlined />,
+    children: [{ label: 'Drawer', key: 'drawer'}]
+  }, 
   { label: 'Toast Grid', key: '2', icon: <TableOutlined /> }, 
   {
     label: 'sub menu',
-    key: '3',
+    key: 'tui-grid',
     children: [{ label: 'item 3', key: 'submenu-item-1' }],
   },
 ];
@@ -48,9 +35,17 @@ const LeftBar: React.FC = () => {
     setCollapsed(!collapsed);
   };
 
+  const navigate = useNavigate();
+
   const onClick: MenuProps['onClick'] = (e) => {
     console.log('click ', e);
     setCurrent(e.key);
+
+    if (e.keyPath[1] === "antd") {
+      navigate(`/antd/${e.keyPath[0]}`);
+    } else {
+      navigate(`/profile/${e.keyPath[0]}`);
+    }
   };
 
   return (

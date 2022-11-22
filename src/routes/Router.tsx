@@ -11,19 +11,20 @@ import NotFound from '../pages/404';
 import Unauthorized from '../pages/Unauthorized';
 import Main from '../pages/Main';
 
-
+import DrawerPage from '../pages/antd/drawer';
 
 function Router() {
   return (
     <Routes>
       {/* public route - no auth required */}
-      <Route path="/" element={<LandingLayout />}>
+      <Route path="/" element={<LandingLayout />}>  
         <Route path="/" element={<Landing />} />
         <Route path="/unauthorized" element={<Unauthorized />} />
         {/* <Route path="/auth/login" element={<Login />} /> */}
       </Route>
       <Route path="/" element={<BaseLayout />}>
         <Route path="/main" element={<Main />} />
+        <Route path="/antd/drawer" element={<DrawerPage />} />
       </Route>
 
       {/* protected route - require auth and specific pageIds */}
