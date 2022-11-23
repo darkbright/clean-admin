@@ -55,11 +55,6 @@ const LeftBar: React.FC = () => {
   const onClick: MenuProps['onClick'] = (e) => {
     console.log('click ', e);
 
-    // if (e.keyPath[1] === "antd") {
-    //   navigate(`/antd/${e.keyPath[0]}`);
-    // } else {
-    //   navigate(`/tui-grid/${e.keyPath[0]}`);
-    // }
     navigate(`/${e.keyPath[1]}/${e.keyPath[0]}`);
   };
 
