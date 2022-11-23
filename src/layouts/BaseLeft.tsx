@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {
   AntDesignOutlined,
+  SmileOutlined,
   TableOutlined,
 } from '@ant-design/icons';
 import { Menu, MenuProps, MenuTheme, Space, Switch } from 'antd';
@@ -23,14 +24,17 @@ const items = [
     key: 'tui-grid', 
     icon: <TableOutlined />,
     children: [
-      { label: 'About', key: 'about'},
+      { label: 'About', key: 'about-grid'},
       { label: 'Basic', key: 'basic'},
     ]
   }, 
   {
-    label: 'sub menu',
-    key: 'sub-menu',
-    children: [{ label: 'item 3', key: 'submenu-item-1' }],
+    label: 'Mock Service Worker',
+    key: 'msw',
+    icon: <SmileOutlined />,
+    children: [
+      { label: 'About', key: 'about-msw' }
+    ],
   },
 ];
 
@@ -51,11 +55,12 @@ const LeftBar: React.FC = () => {
   const onClick: MenuProps['onClick'] = (e) => {
     console.log('click ', e);
 
-    if (e.keyPath[1] === "antd") {
-      navigate(`/antd/${e.keyPath[0]}`);
-    } else {
-      navigate(`/tui-grid/${e.keyPath[0]}`);
-    }
+    // if (e.keyPath[1] === "antd") {
+    //   navigate(`/antd/${e.keyPath[0]}`);
+    // } else {
+    //   navigate(`/tui-grid/${e.keyPath[0]}`);
+    // }
+    navigate(`/${e.keyPath[1]}/${e.keyPath[0]}`);
   };
 
   return (

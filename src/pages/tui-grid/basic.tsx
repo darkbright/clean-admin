@@ -28,7 +28,7 @@ const columns: OptColumn[] = [
 function App() {
   return (
     <>
-      <BaseDataGrid columns={columns} />
+      <BaseDataGrid columns={columns} tableName="basic" />
     </>
   );
 }
