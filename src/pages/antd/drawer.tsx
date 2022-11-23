@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Drawer, Space } from 'antd';
-import { Divider, Typography } from 'antd';
+import { Typography } from 'antd';
 
-const { Title, Paragraph, Text, Link } = Typography;
+const { Title, Text } = Typography;
 
 const App: React.FC = () => {
   const [open, setOpen] = useState(false);

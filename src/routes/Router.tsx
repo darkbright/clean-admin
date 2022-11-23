@@ -14,6 +14,8 @@ import Main from '../pages/Main';
 import DrawerPage from '../pages/antd/drawer';
 import MessagePage from '../pages/antd/message';
 import NotificationPage from '../pages/antd/notification';
+import AboutPage from '../pages/tui-grid/about';
+import BasicPage from '../pages/tui-grid/basic';
 
 function Router() {
   return (
@@ -29,6 +31,8 @@ function Router() {
         <Route path="/antd/drawer" element={<DrawerPage />} />
         <Route path="/antd/message" element={<MessagePage />} />
         <Route path="/antd/notification" element={<NotificationPage />} />
+        <Route path="/tui-grid/about" element={<AboutPage />} />
+        <Route path="/tui-grid/basic" element={<BasicPage />} />
       </Route>
 
       {/* protected route - require auth and specific pageIds */}
