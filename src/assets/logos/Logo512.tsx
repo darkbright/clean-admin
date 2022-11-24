@@ -11,6 +11,7 @@ interface LogoProp {
  */
 
 function Logo({ width = 280 }: LogoProp) {
+  // eslint-disable-next-line jsx-a11y/alt-text
   return <img src="/logo512.png" width={width} />;
 }
 
