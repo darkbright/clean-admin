@@ -16,6 +16,8 @@ function MainHeader() {
           <Typography>SYSTEM____🤍 </Typography>
         <Button type="primary" onClick={() => navigate('/auth/login')}
         >로그인</Button>
+        <Button type="primary" onClick={() => navigate('/main')}
+        >Main</Button>
       </Space>
     </Root>
   );

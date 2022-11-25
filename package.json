@@ -16,6 +16,7 @@
     "@types/react-dom": "^18.0.0",
     "@types/styled-components": "^5.1.26",
     "antd": "^5.0.0",
+    "eslint-config-prettier": "^8.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3",
@@ -28,7 +29,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
+    "lint:fix": "eslint --fix src/**/*.{ts,tsx,js,jsx,json}",
+    "prettier": "prettier --check --config ./.prettierrc ./src",
+    "prettier:fix": "prettier --write --config ./.prettierrc ./src"
   },
   "eslintConfig": {
     "extends": [
@@ -49,7 +54,12 @@
     ]
   },
   "devDependencies": {
-    "msw": "^0.49.0"
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0",
+    "eslint": "^8.28.0",
+    "eslint-plugin-react": "^7.31.11",
+    "msw": "^0.49.0",
+    "prettier": "^2.8.0"
   },
   "msw": {
     "workerDirectory": "public"

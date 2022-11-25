@@ -12,6 +12,7 @@ import Unauthorized from '../pages/Unauthorized';
 import Login from '../pages/auth/Login';
 
 import Main from '../pages/Main';
+import EslintPrettier from '../pages/introduction/eslint-prettier';
 import DrawerPage from '../pages/antd/drawer';
 import MessagePage from '../pages/antd/message';
 import NotificationPage from '../pages/antd/notification';
@@ -30,6 +31,7 @@ function Router() {
       </Route>
       <Route path="/" element={<BaseLayout />}>
         <Route path="/main" element={<Main />} />
+        <Route path="/introduction/eslint-prettier" element={<EslintPrettier />} />
         <Route path="/antd/drawer" element={<DrawerPage />} />
         <Route path="/antd/message" element={<MessagePage />} />
         <Route path="/antd/notification" element={<NotificationPage />} />
