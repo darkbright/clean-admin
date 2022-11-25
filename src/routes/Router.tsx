@@ -9,8 +9,9 @@ import BaseLayout from '../layouts/BaseLayout';
 import Landing from '../pages/Landing';
 import NotFound from '../pages/404';
 import Unauthorized from '../pages/Unauthorized';
-import Main from '../pages/Main';
+import Login from '../pages/auth/Login';
 
+import Main from '../pages/Main';
 import DrawerPage from '../pages/antd/drawer';
 import MessagePage from '../pages/antd/message';
 import NotificationPage from '../pages/antd/notification';
@@ -25,7 +26,7 @@ function Router() {
       <Route path="/" element={<LandingLayout />}>  
         <Route path="/" element={<Landing />} />
         <Route path="/unauthorized" element={<Unauthorized />} />
-        {/* <Route path="/auth/login" element={<Login />} /> */}
+        <Route path="/auth/login" element={<Login />} />
       </Route>
       <Route path="/" element={<BaseLayout />}>
         <Route path="/main" element={<Main />} />
