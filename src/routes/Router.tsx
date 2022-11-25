@@ -1,3 +1,4 @@
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 // import { menu } from '../data/constants/menu';
 // import Login from '../pages/auth/Login';
@@ -24,7 +25,7 @@ function Router() {
   return (
     <Routes>
       {/* public route - no auth required */}
-      <Route path="/" element={<LandingLayout />}>  
+      <Route path="/" element={<LandingLayout />}>
         <Route path="/" element={<Landing />} />
         <Route path="/unauthorized" element={<Unauthorized />} />
         <Route path="/auth/login" element={<Login />} />

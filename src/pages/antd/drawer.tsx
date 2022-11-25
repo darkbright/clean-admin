@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Drawer, Space } from 'antd';
-import { Typography } from 'antd';
+import { Button, Drawer, Space, Typography } from 'antd';
 
 const { Title, Text } = Typography;
 
@@ -17,12 +16,12 @@ const App: React.FC = () => {
 
   return (
     <>
-      <Space direction='vertical'>
+      <Space direction="vertical">
         <Title>Drawer</Title>
         <Text>화면 가장자리에서 슬라이드되는 패널</Text>
         <Button type="primary" onClick={showDrawer}>
           Open Drawer
-      </Button>
+        </Button>
       </Space>
       <Drawer title="Basic Drawer" placement="right" onClose={onClose} open={open}>
         <p>Some contents...</p>

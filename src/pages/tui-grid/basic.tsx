@@ -5,24 +5,24 @@ import { OptColumn } from 'tui-grid/types/options';
 const columns: OptColumn[] = [
   {
     header: 'Name',
-    name: 'name'
+    name: 'name',
   },
   {
     header: 'Artist',
-    name: 'artist'
+    name: 'artist',
   },
   {
     header: 'Type',
-    name: 'type'
+    name: 'type',
   },
   {
     header: 'Release',
-    name: 'release'
+    name: 'release',
   },
   {
     header: 'Genre',
-    name: 'genre'
-  }
+    name: 'genre',
+  },
 ];
 
 function App() {

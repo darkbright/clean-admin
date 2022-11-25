@@ -18,14 +18,14 @@ const BaseLayout: React.FC = () => (
     </Header>
     <Layout>
       <BaseLeft />
-      <Layout className="site-layout-background" style={{ padding: '0 24px 24px'}}>
+      <Layout className="site-layout-background" style={{ padding: '0 24px 24px' }}>
         <BreadcrumbBar />
         <Content
           className="site-layout-background"
           style={{
             padding: 24,
             margin: 0,
-            minHeight: 800
+            minHeight: 800,
           }}
         >
           <Outlet />

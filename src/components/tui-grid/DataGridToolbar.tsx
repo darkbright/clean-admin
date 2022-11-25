@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 
 import {
@@ -15,7 +16,7 @@ import { Button, Space, Tooltip } from 'antd';
 import Grid from '@toast-ui/react-grid';
 
 interface DataGridToolBarProps {
-  ref: React.RefObject<Grid>,
+  ref: React.RefObject<Grid>;
   appendRow: () => void;
   refresh: () => void;
   onFilter?: () => void;
@@ -42,9 +43,8 @@ function DataGridToolbar({
   modifyData,
   removeRows,
   exportFile,
-  copyToClipboard
+  copyToClipboard,
 }: DataGridToolBarProps) {
-
   const ToolBarOptions = [
     {
       id: 0,
@@ -53,14 +53,14 @@ function DataGridToolbar({
           id: 0,
           title: '리프레시?',
           key: 'refresh',
-          icon: <ReloadOutlined  width="small"/>,
+          icon: <ReloadOutlined width="small" />,
           onClick: refresh,
         },
         {
           id: 1,
           title: '테이블 설정',
           key: 'table-setting',
-          icon: <TableOutlined width="small"/>,
+          icon: <TableOutlined width="small" />,
           // onClick: openTableSetting,ButtonGroup
           onClick: () => null,
         },
@@ -95,7 +95,7 @@ function DataGridToolbar({
           id: 2,
           title: '파일로 내보내기',
           key: 'export-as-file',
-          icon: <DownloadOutlined width="small"/>,
+          icon: <DownloadOutlined width="small" />,
           onClick: exportFile,
         },
       ],
@@ -107,7 +107,7 @@ function DataGridToolbar({
           id: 0,
           title: '삭제',
           key: 'delete',
-          icon: <DeleteRowOutlined width="small"/>,
+          icon: <DeleteRowOutlined width="small" />,
           onClick: removeRows,
         },
         {
@@ -125,6 +125,7 @@ function DataGridToolbar({
     <Root>
       <LeftBar>
         {ToolBarOptions.map((group) => (
+          // eslint-disable-next-line react/jsx-key
           <Space size="large">
             <Space.Compact size="large" block>
               {group.buttons.map((btn) => (
@@ -142,7 +143,7 @@ function DataGridToolbar({
         <Space.Compact size="large" block>
           <Tooltip title="필터">
             <IconButton onClick={onFilter}>
-              <FilterOutlined width="large"/>
+              <FilterOutlined width="large" />
             </IconButton>
           </Tooltip>
         </Space.Compact>
@@ -152,7 +153,6 @@ function DataGridToolbar({
 }
 
 export default DataGridToolbar;
-
 
 const Root = styled('div')({
   display: 'flex',
@@ -174,4 +174,3 @@ const IconButton = styled(Button)(() => ({
     // color: theme.palette.secondary.light,
   },
 }));
-

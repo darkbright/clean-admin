@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button, Space, Typography } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
@@ -10,14 +11,14 @@ function MainHeader() {
     <Root>
       <Space direction="vertical" size="middle" style={{ display: 'flex', alignItems: 'center' }}>
         <Logo512 width={140} />
-        <Typography color="primary">
-            CLEAN ADMIN
-          </Typography>
-          <Typography>SYSTEM____🤍 </Typography>
-        <Button type="primary" onClick={() => navigate('/auth/login')}
-        >로그인</Button>
-        <Button type="primary" onClick={() => navigate('/main')}
-        >Main</Button>
+        <Typography color="primary">CLEAN ADMIN</Typography>
+        <Typography>SYSTEM____🤍 </Typography>
+        <Button type="primary" onClick={() => navigate('/auth/login')}>
+          로그인
+        </Button>
+        <Button type="primary" onClick={() => navigate('/main')}>
+          Main
+        </Button>
       </Space>
     </Root>
   );

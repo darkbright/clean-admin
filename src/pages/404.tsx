@@ -2,11 +2,10 @@ import { Button, Result } from 'antd';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-
 const NotFound: React.FC = () => {
   const navigate = useNavigate();
   const goBack = () => navigate(-1);
-  
+
   return (
     <Result
       status="404"
@@ -18,7 +17,7 @@ const NotFound: React.FC = () => {
         </Button>
       }
     />
-  );  
-}  
+  );
+};
 
 export default NotFound;

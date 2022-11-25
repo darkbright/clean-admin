@@ -1,23 +1,21 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-import { worker } from "./mocks/worker";
+import { worker } from './mocks/worker';
 
-if (process.env.REACT_APP_STATUS === "development") {
-  console.log("DEVELOPMENT");
-  worker.start();
+if (process.env.REACT_APP_STATUS === 'development') {
+  console.log('DEVELOPMENT');
+  void worker.start();
 }
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

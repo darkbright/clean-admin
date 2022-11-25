@@ -1,9 +1,10 @@
+import React, { createRef } from 'react';
 import TuiGrid from 'tui-grid';
 import 'tui-grid/dist/tui-grid.css';
 import Grid from '@toast-ui/react-grid';
 import { OptColumn, OptHeader } from 'tui-grid/types/options';
 import { DataSource } from 'tui-grid/types/dataSource';
-import { createRef } from 'react';
+
 import DataGridToolbar from './DataGridToolbar';
 
 interface BaseDataGridProps {
@@ -14,13 +15,7 @@ interface BaseDataGridProps {
   showToolbar?: boolean;
 }
 
-function BaseDataGrid({
-  tableName,
-  columns,
-  frozenColumn = 0,
-  header = { height: 60 },
-  showToolbar = true,
-}: BaseDataGridProps) {
+function BaseDataGrid({ tableName, columns, frozenColumn = 0, header = { height: 60 }, showToolbar = true }: BaseDataGridProps) {
   // grid language
   TuiGrid.setLanguage('ko');
 
@@ -71,6 +66,5 @@ function BaseDataGrid({
     </>
   );
 }
-
 
 export default BaseDataGrid;

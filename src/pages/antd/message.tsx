@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button, message, Space } from 'antd';
-import { Typography } from 'antd';
+import { Button, message, Space, Typography } from 'antd';
 
 const { Title, Text } = Typography;
 
@@ -8,25 +7,25 @@ const App: React.FC = () => {
   const [messageApi, contextHolder] = message.useMessage();
 
   const info = () => {
-    messageApi.info('Hello, Ant Design!');
+    void messageApi.info('Hello, Ant Design!');
   };
 
   const success = () => {
-    messageApi.open({
+    void messageApi.open({
       type: 'success',
       content: 'This is a success message',
     });
   };
 
   const error = () => {
-    messageApi.open({
+    void messageApi.open({
       type: 'error',
       content: 'This is an error message',
     });
   };
 
   const warning = () => {
-    messageApi.open({
+    void messageApi.open({
       type: 'warning',
       content: 'This is a warning message',
     });
@@ -34,7 +33,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <Space direction='vertical'>
+      <Space direction="vertical">
         <Title>Message</Title>
         <Text>사용자 작업에 대한 응답으로 글로벌 메시지를 피드백으로 표시합니다.</Text>
         {contextHolder}

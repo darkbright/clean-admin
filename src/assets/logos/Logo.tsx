@@ -1,3 +1,5 @@
+import React from 'react';
+
 interface LogoProp {
   width?: number;
   color?: string;

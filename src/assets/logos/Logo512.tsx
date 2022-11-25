@@ -1,3 +1,5 @@
+import React from 'react';
+
 interface LogoProp {
   width?: number;
   color?: string;
@@ -11,7 +13,6 @@ interface LogoProp {
  */
 
 function Logo({ width = 280 }: LogoProp) {
-  // eslint-disable-next-line jsx-a11y/alt-text
   return <img src="/logo512.png" width={width} />;
 }
 

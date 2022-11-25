@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
-import { Button, Divider, notification, Space } from 'antd';
-import { Typography } from 'antd';
+import { Button, Divider, notification, Space, Typography } from 'antd';
+
 import { RadiusUpleftOutlined, RadiusUprightOutlined, RadiusBottomleftOutlined, RadiusBottomrightOutlined } from '@ant-design/icons';
 import { NotificationPlacement } from 'antd/es/notification/interface';
 
@@ -23,37 +23,35 @@ const App: React.FC = () => {
 
   return (
     <>
-      <Space direction='vertical'>
+      <Space direction="vertical">
         <Title>Notification</Title>
         <Text>전체적으로 알림 메시지를 표시합니다.</Text>
 
-      <Context.Provider value={contextValue}>
-      {contextHolder}
-      <Space>
-        <Button type="primary" onClick={() => openNotification('topLeft')}>
-          <RadiusUpleftOutlined />
-          topLeft
-        </Button>
-        <Button type="primary" onClick={() => openNotification('topRight')}>
-          <RadiusUprightOutlined />
-          topRight
-        </Button>
+        <Context.Provider value={contextValue}>
+          {contextHolder}
+          <Space>
+            <Button type="primary" onClick={() => openNotification('topLeft')}>
+              <RadiusUpleftOutlined />
+              topLeft
+            </Button>
+            <Button type="primary" onClick={() => openNotification('topRight')}>
+              <RadiusUprightOutlined />
+              topRight
+            </Button>
+          </Space>
+          <Divider />
+          <Space>
+            <Button type="primary" onClick={() => openNotification('bottomLeft')}>
+              <RadiusBottomleftOutlined />
+              bottomLeft
+            </Button>
+            <Button type="primary" onClick={() => openNotification('bottomRight')}>
+              <RadiusBottomrightOutlined />
+              bottomRight
+            </Button>
+          </Space>
+        </Context.Provider>
       </Space>
-      <Divider />
-      <Space>
-        <Button type="primary" onClick={() => openNotification('bottomLeft')}>
-          <RadiusBottomleftOutlined />
-          bottomLeft
-        </Button>
-        <Button type="primary" onClick={() => openNotification('bottomRight')}>
-          <RadiusBottomrightOutlined />
-          bottomRight
-        </Button>
-      </Space>
-    </Context.Provider>
-
-      </Space>
-
     </>
   );
 };

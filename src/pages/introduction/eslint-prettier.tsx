@@ -1,5 +1,5 @@
-import { Typography } from 'antd';
 import React from 'react';
+import { Typography } from 'antd';
 const { Title, Text, Paragraph } = Typography;
 
 const App: React.FC = () => {
